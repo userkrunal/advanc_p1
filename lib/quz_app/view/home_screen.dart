@@ -134,11 +134,13 @@ class _QuezScreenState extends State<QuezScreen> {
                     visible: qpT!.x,
                       child: InkWell(
                         onTap: () {
-                          qpF!.
                           Navigator.pushNamed(context, 'win');
                         },
-                        child: Container(
-                            child: Text("Show your answer ")),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 350,left: 130),
+                          child: Container(
+                              child: Text("Show your answer ")),
+                        ),
                       ))
                 ],
               );
