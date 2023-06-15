@@ -32,10 +32,9 @@ class _QuezScreenState extends State<QuezScreen> {
           else if(snapshot.hasData)
             {
               QuezModel quezModel=snapshot.data!;
-              List? quezList=quezModel.results![0].incorrectAnswers;
-              quezList?.add(quezModel.results![0].correctAnswer);
-              // Random rnd=Random();
-              // quezList = rnd.toList();
+              // List? quezList=quezModel.results![0].incorrectAnswers;
+              // quezList?.add(quezModel.results![0].correctAnswer);
+
               return  Stack(
                 children: [
                   Padding(
@@ -131,6 +130,16 @@ class _QuezScreenState extends State<QuezScreen> {
                         ],
                       ),
                     ),
+                  Visibility(
+                    visible: qpT!.x,
+                      child: InkWell(
+                        onTap: () {
+                          qpF!.
+                          Navigator.pushNamed(context, 'win');
+                        },
+                        child: Container(
+                            child: Text("Show your answer ")),
+                      ))
                 ],
               );
             }
